@@ -51,8 +51,8 @@ P'   MM   `7 ,MI    "Y          MM    `7
                      .JMML.
 {PARSER.colormap['RESET']}
 {PARSER.colormap['TITLE_BACKGROUND']}{PARSER.colormap['TITLE_FOREGROUND']}TSpE
-{PARSER.colormap['AUTHOR_BACKGROUND']}{PARSER.colormap['AUTHOR_FOREGROUND']}MF366
-{PARSER.colormap['RESET_ALL']}Copyright (C) 2024  MF366
+{PARSER.colormap['AUTHOR_BACKGROUND']}{PARSER.colormap['AUTHOR_FOREGROUND']}Matthew
+{PARSER.colormap['RESET_ALL']}Copyright (C) 2024  Matthew
 {PARSER.colormap['ASCII_TITLE']}Terminal Supaplex Editor'''
 
 cur_dir: str = os.getcwd()
@@ -67,7 +67,7 @@ levelset_scrn = screen.Context("Levelset Editor", DEFAULT_PLACEHOLDER)
 
 # [*] Home screen setup
 def about_tspe() -> str:
-    return f"{PARSER.colormap['INFO_BACKGROUND']}{PARSER.colormap['INFO_FOREGROUND']}TSpE - Terminal Supaplex Editor is a backwards-compatible Supaplex level editor made by MF366{PARSER.colormap['RESET_ALL']}\n\n{TITLE}"
+    return f"{PARSER.colormap['INFO_BACKGROUND']}{PARSER.colormap['INFO_FOREGROUND']}TSpE - Terminal Supaplex Editor is a backwards-compatible Supaplex level editor made by Matthew{PARSER.colormap['RESET_ALL']}\n\n{TITLE}"
 
 
 def change_directory(path: str) -> str:
@@ -287,7 +287,7 @@ def open_level_on_editor(path: str) -> screen.Context:
 
 
 def open_spfix_documentation() -> screen.Context:
-    simple_webbrowser.website("https://github.com/MF366-Coding/The-Ultimate-Supaplex-Archive/blob/d04be7b765bb9c50a9eb014527aef688fc483556/Supaplex_Stuff/Documentation/SPFIX63a.pdf")
+    simple_webbrowser.website("https://github.com/matty-the-dev/The-Ultimate-Supaplex-Archive/blob/d04be7b765bb9c50a9eb014527aef688fc483556/Supaplex_Stuff/Documentation/SPFIX63a.pdf")
     return home_scrn
 
 
@@ -711,7 +711,7 @@ def reload_current_screen() -> str:
 
 
 def open_repository_on_browser() -> str:
-    simple_webbrowser.website('https://github.com/MF366-Coding/TSpE')
+    simple_webbrowser.website('https://github.com/matty-the-dev/TSpE')
     return f"{PARSER.colormap['SUCESSFUL_BACKGROUND']}{PARSER.colormap['SUCESSFUL_FOREGROUND']}:D{PARSER.colormap['RESET_ALL']}\n\n{TITLE}"
 
 
@@ -726,7 +726,7 @@ def check_for_updates():
     # [i] If there isn't a cached version...
     if LATEST is None:
         try:
-            response = requests.get('https://api.github.com/repos/MF366-Coding/TSpE/releases/latest', timeout=1)
+            response = requests.get('https://api.github.com/repos/matty-the-dev/TSpE/releases/latest', timeout=1)
             data = json.loads(response.text)
             LATEST = data['tag_name']
 
