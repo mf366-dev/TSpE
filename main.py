@@ -287,7 +287,7 @@ def open_level_on_editor(path: str) -> screen.Context:
 
 
 def open_spfix_documentation() -> screen.Context:
-    simple_webbrowser.website("https://github.com/matty-the-dev/The-Ultimate-Supaplex-Archive/blob/d04be7b765bb9c50a9eb014527aef688fc483556/Supaplex_Stuff/Documentation/SPFIX63a.pdf")
+    simple_webbrowser.website("https://github.com/mf366-dev/The-Ultimate-Supaplex-Archive/blob/d04be7b765bb9c50a9eb014527aef688fc483556/Supaplex_Stuff/Documentation/SPFIX63a.pdf")
     return home_scrn
 
 
@@ -711,12 +711,12 @@ def reload_current_screen() -> str:
 
 
 def open_repository_on_browser() -> str:
-    simple_webbrowser.website('https://github.com/matty-the-dev/TSpE')
+    simple_webbrowser.website('https://github.com/mf366-dev/TSpE')
     return f"{PARSER.colormap['SUCESSFUL_BACKGROUND']}{PARSER.colormap['SUCESSFUL_FOREGROUND']}:D{PARSER.colormap['RESET_ALL']}\n\n{TITLE}"
 
 
 def get_help():
-    simple_webbrowser.website(f'https://mf366-coding.github.io/documentation/tspe/tspe_{VERSION[1:-2]}.html')
+    simple_webbrowser.website(f'https://mf366-dev.github.io/documentation/tspe/tspe_{VERSION[1:-2]}.html')
     return f"{PARSER.colormap['SUCESSFUL_BACKGROUND']}{PARSER.colormap['SUCESSFUL_FOREGROUND']}Help is on its way.{PARSER.colormap['RESET_ALL']}\n\n{TITLE}"
 
 
@@ -726,7 +726,7 @@ def check_for_updates():
     # [i] If there isn't a cached version...
     if LATEST is None:
         try:
-            response = requests.get('https://api.github.com/repos/matty-the-dev/TSpE/releases/latest', timeout=1)
+            response = requests.get('https://api.github.com/repos/mf366-dev/TSpE/releases/latest', timeout=1)
             data = json.loads(response.text)
             LATEST = data['tag_name']
 
