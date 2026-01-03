@@ -12,9 +12,9 @@ updates:
       timezone: "Europe/Lisbon"
       interval: "daily"
     reviewers:
-      - "matty-the-dev-"
+      - "mf366-dev"
     assignees:
-      - "matty-the-dev"
+      - "mf366-dev"
     commit-message:
       prefix: "pip"
 
